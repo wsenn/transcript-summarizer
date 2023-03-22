@@ -1,6 +1,12 @@
 import whisper
 import streamlit as st
 import requests
+import os
+
+def save_file(file):
+    with open(file.name, "wb") as f:
+        f.write(file.getbuffer())
+    return file.name
 
 st.set_page_config(page_title="Summarizor", page_icon=":fire:")
 
@@ -15,8 +21,9 @@ with st.form("hi"):
     if st.form_submit_button("Summarize"):
         if file and email:
             with st.spinner("Generating magic..."):
+                file_path = save_file(file)
                 model = whisper.load_model("base")
-                result = model.transcribe(file.name, fp16=False)
+                result = model.transcribe(file_path, fp16=False)
                 # st.write(result["text"])
                 # st.write(result)
 
@@ -24,6 +31,8 @@ with st.form("hi"):
                 payload = {"email": email, "result": result["text"]} 
                 requests.post(webhook_url, json=payload)
                 st.write("Done!")
+
+                os.remove(file_path)
         elif not file:
             st.write("Please upload your file first!")
         else :
