@@ -1,7 +1,9 @@
+import os
+os.environ['FFMPEG_BINARY'] = '/path/to/ffmpeg'
 import whisper
 import streamlit as st
 import requests
-import os
+
 
 def save_file(file):
     with open(file.name, "wb") as f:
