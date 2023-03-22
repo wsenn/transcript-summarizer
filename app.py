@@ -1,7 +1,8 @@
 import os
-os.system('apt-get update')
-os.system('apt-get install ffmpeg -y')
+os.system('sudo apt-get update')
+os.system('sudo apt-get install ffmpeg -y')
 os.environ['FFMPEG_BINARY'] = '/usr/bin/ffmpeg'
+
 import whisper
 import streamlit as st
 import requests
