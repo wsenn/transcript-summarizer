@@ -10,7 +10,7 @@ dependencies:
     - whisper
     - requests
     - numba
-    - numpy
+    - numpy=1.23
     - torch
     - tqdm
     - more-itertools
