@@ -35,7 +35,7 @@ with st.form("hi"):
                 webhook_url = "https://hooks.zapier.com/hooks/catch/14830394/331xres/"
                 payload = {"email": email, "result": result["text"]} 
                 requests.post(webhook_url, json=payload)
-                st.write("Done!")
+                st.write("Email sent!")
 
                 os.remove(file_path)
         elif not file:
