@@ -10,7 +10,7 @@ dependencies:
     - openai-whisper
     - whisper
     - requests
-    - numba
+    - numba==0.53.1
     - torch
     - tqdm
     - more-itertools
