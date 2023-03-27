@@ -9,4 +9,11 @@ dependencies:
     - openai-whisper
     - whisper
     - requests
+    - numba
+    - numpy
+    - torch
+    - tqdm
+    - more-itertools
+    - tiktoken
+    - ffmpeg-python
   - ffmpeg
