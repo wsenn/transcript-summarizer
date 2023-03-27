@@ -5,12 +5,12 @@ dependencies:
   - python
   - pip
   - pip:
+    - numpy==1.23.3
     - streamlit
     - openai-whisper
     - whisper
     - requests
     - numba
-    - numpy==1.23
     - torch
     - tqdm
     - more-itertools
