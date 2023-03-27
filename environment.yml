@@ -1,10 +1,12 @@
-name: my-app
+name: transcript-summarizer
 channels:
   - conda-forge
 dependencies:
+  - python
   - pip
   - pip:
     - streamlit
+    - openai-whisper
     - whisper
     - requests
   - ffmpeg
