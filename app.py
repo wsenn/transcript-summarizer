@@ -32,7 +32,7 @@ with st.form("hi"):
                 # st.write(result["text"])
                 # st.write(result)
 
-                webhook_url = "https://hooks.zapier.com/hooks/catch/14830394/331xres/"
+                webhook_url = "YOUR_URL_WEBHOOK_ZAPIER"
                 payload = {"email": email, "result": result["text"]} 
                 requests.post(webhook_url, json=payload)
                 st.write("Email sent!")
