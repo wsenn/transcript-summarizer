@@ -41,3 +41,9 @@ install dependencies
 pip install -r requirements.txt
 ```
 
+replace your Webhook by zapier in the app.py file
+```python
+webhook_url = "YOUR_URL_WEBHOOK_ZAPIER"
+```
+
+
